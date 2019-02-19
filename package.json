@@ -1,11 +1,12 @@
 {
-  "name": "react-spring",
+  "name": "springs",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
-    "react-scripts": "2.1.5"
+    "react-scripts": "2.1.5",
+    "react-spring": "^8.0.7"
   },
   "scripts": {
     "start": "react-scripts start",
