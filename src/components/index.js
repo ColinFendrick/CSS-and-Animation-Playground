@@ -1,6 +1,5 @@
 import ColorPanels from './ColorPanels'
+import CoolBoxes from './CoolBoxes';
 import Globs from './Globs'
-import Panel from './Panel'
-import Spring from './Spring'
 import MainText from './MainText'
-export { ColorPanels, Globs, MainText, Panel, Spring }
+export { ColorPanels, CoolBoxes, Globs, MainText }

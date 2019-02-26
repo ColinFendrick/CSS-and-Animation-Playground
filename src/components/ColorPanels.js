@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { useTrail } from 'react-spring'
+import { animated, useTrail } from 'react-spring'
 import ColorScheme from 'color-scheme'
 
-import { Panel, MainText } from '.'
+import { MainText } from '.'
 const config = { mass: 5, tension: 2000, friction: 200 }
 
 export default () => {
@@ -26,7 +26,7 @@ export default () => {
     }}>
       {trail.map((props, index) =>
         (index < 8) ?
-        <Panel key={index}  style={{...props, backgroundColor: `#${colors[index]}`}} />
+        <animated.div className="panel" key={index}  style={{...props, backgroundColor: `#${colors[index]}`}} />
         :
         <MainText key={index} style={props} />
       )}
