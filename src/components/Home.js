@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import {
+	animatedbuttonsgif,
 	boxesgif,
 	buttonsgif,
 	globsgif,
@@ -11,18 +12,23 @@ import {
 export default () => {
 	return (
 		<div className='background home-background flex-column'>
-
+			<div className='home-link mb-3 mt-2'>
+				<h3>Click on a panel to view a demo</h3>
+			</div>
 			<div className='d-flex mb-5'>
-				<Link to={'/globs'} className='home-link'>
+				<Link to='/animated-buttons' className='home-link'>
+					<img src={animatedbuttonsgif} alt='Animated Buttons!' />
+				</Link>
+				<Link to='/globs' className='home-link'>
 					<img src={globsgif} alt='Globs!' />
 				</Link>
-				<Link to={'/boxes'} className='home-link'>
+				<Link to='/boxes' className='home-link'>
 					<img src={boxesgif} alt='Boxes!' />
 				</Link>
-				<Link to={'/panels'} className='home-link'>
+				<Link to='/panels' className='home-link'>
 					<img src={panelsgif} alt='Panels!' />
 				</Link>
-				<Link to={'/buttons'} className='home-link'>
+				<Link to='/buttons' className='home-link'>
 					<img src={buttonsgif} alt='Buttons!' />
 				</Link>
 			</div>

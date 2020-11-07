@@ -32,9 +32,12 @@ export default () => {
 	const colors = scheme.from_hue(ranInt).scheme(ranScheme).variation(ranVariant).colors();
 
 	return (
-		<div className='background' onClick={() => {
-			setCounter(() => setCounter(counter + 1));
-		}}>
+		<div
+			className='background'
+			onClick={() => {
+				setCounter(() => setCounter(counter + 1));
+			}}
+		>
 			{trail.map((props, index) =>
 				(index < 8) ?
 					<animated.div className='panel' key={index}  style={{ ...props, backgroundColor: `#${colors[index]}` }} /> :

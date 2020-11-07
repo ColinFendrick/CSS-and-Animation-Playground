@@ -9,9 +9,14 @@ body {
   --bluegrey: #96b7c4;
   --white: #fff;
   --loadingdark: #35405a;
+  --cyan: #69d1cc;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h3 {
+  color: var(--white);
 }

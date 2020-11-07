@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import {
+	AnimatedButtons,
 	CoolButtons,
 	ColorPanels,
 	CoolBoxes,
@@ -13,6 +14,7 @@ import {
 const App = () => (
 	<div className='App'>
 		<Switch>
+			<Route path='/animated-buttons' component={AnimatedButtons} />
 			<Route path='/buttons' component={CoolButtons} />
 			<Route path='/panels' component={ColorPanels} />
 			<Route path='/globs' component={Globs} />
