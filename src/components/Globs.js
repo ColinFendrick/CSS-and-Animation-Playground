@@ -9,7 +9,7 @@ export default () => {
 	const [trail, set] = useTrail(3, () => ({ xy: [0, 0], config: i => (i === 0 ? fast : slow) }));
 
 	return (
-		<>
+		<div className='background'>
 			<svg style={{ position: 'absolute', width: 0, height: 0 }}>
 				<filter id='goo'>
 					<feGaussianBlur in='SourceGraphic' result='blur' stdDeviation='30' />
@@ -21,6 +21,6 @@ export default () => {
 					<animated.div key={index} style={{ transform: props.xy.interpolate(trans) }} />
 				))}
 			</div>
-		</>
+		</div>
 	);
 };

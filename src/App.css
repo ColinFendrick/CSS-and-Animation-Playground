@@ -1,6 +1,38 @@
 .background {
   display: flex;
   height: 100vh;
+  background: var(--white);
+}
+
+.home-background {
+  background: var(--loadingdark)
+}
+
+.home-link {
+  margin: 0 50px;
+}
+
+.home-link img {
+  width: 150px;
+  height: 150px;
+  transition: width 0.2s ease, height 0.2s ease, boxshadow 0.1s ease-in;
+}
+
+.home-link img:hover {
+  width: 250px;
+  height: 250px;
+  box-shadow: 0 3px 30px #dddddd4d;
+}
+
+.unstyled-link {
+  color: #eeeeeecc;
+  text-decoration: none;
+  transition: color 0.2s ease-in;
+}
+
+.unstyled-link:hover {
+  color: var(--white);
+  text-decoration: none;
 }
 
 .panel {
@@ -89,6 +121,7 @@
 
 .cool-boxes-wrapper {
   height: 100vh;
+  background-color: white;
 }
 .cool-boxes {
   position: relative;
@@ -101,7 +134,6 @@
   cursor: pointer;
   box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.05);
   will-change: width,
-  height;
 }
 
 .transition-box {
@@ -110,5 +142,4 @@
   background: white;
   border-radius: 5px;
   will-change: transform,
-  opacity;
 }
