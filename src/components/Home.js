@@ -33,7 +33,7 @@ export default () => {
 				</Link>
 			</div>
 
-			<div className='home-link'>
+			<div className='home-link position-bottom'>
 				<Link to={'/'} className='unstyled-link'>
 					I'm trying to see that dope loading screen again (will return you to this page in five seconds)
 				</Link>

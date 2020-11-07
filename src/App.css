@@ -24,6 +24,11 @@
   box-shadow: 0 3px 30px #dddddd4d;
 }
 
+.home-link.position-bottom {
+  margin-top: auto;
+  margin-bottom: 1rem;
+}
+
 .unstyled-link {
   color: #eeeeeecc;
   text-decoration: none;

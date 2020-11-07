@@ -1,7 +1,5 @@
 import React from 'react';
 
-import '../Buttons.css';
-
 export default () => (
 	<div className='btn-wrapper'>
 		<div className='btn from-top'>From Top</div>

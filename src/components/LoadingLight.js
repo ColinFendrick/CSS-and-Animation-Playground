@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 
-import '../Light.css';
-
-export default ({ history, timeout = 5000 }) => {
+export default ({ history, timeout = 3200 }) => {
 	useEffect(() => {
 		setTimeout(() => {
 			history.push('/home');
@@ -11,7 +9,8 @@ export default ({ history, timeout = 5000 }) => {
 	return (
 		<div className='light-container'>
 			<div className='light-wrap'>
-				<div className='panel'></div>
+				<div className='untranslate'>LOADING...</div>
+				<div className='light-panel'></div>
 				<div className='light'></div>
 				<div className='light'></div>
 				<div className='light'></div>

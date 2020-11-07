@@ -5,6 +5,9 @@ import { BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import './App.css';
+import './Light.css';
+import './Buttons.css';
+
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';

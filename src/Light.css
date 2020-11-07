@@ -48,6 +48,12 @@
   backface-visibility: hidden;
 }
 
+.light-container .light-wrap .untranslate {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  color: var(--loadingdark)
+}
+
 @-webkit-keyframes fadeinout {
   0% {
     opacity: 0;
@@ -132,8 +138,8 @@
   transform: rotateX(90deg) translateZ(200px);
   z-index: 999;
   background: var(--white);
-  -webkit-box-shadow: -2px 0 0 0 #35405a, 2px 0 0 0 #35405a;
-  box-shadow: -2px 0 0 0 #35405a, 2px 0 0 0 #35405a;
+  -webkit-box-shadow: -2px 0 0 0 var(--loadingdark), 2px 0 0 0 var(--loadingdark);
+  box-shadow: -2px 0 0 0 var(--loadingdark), 2px 0 0 0 var(--loadingdark);
 }
 
 .light-container .light-wrap .light:nth-of-type(4) {
@@ -145,11 +151,11 @@
   transform: rotateY(90deg) translateZ(201px);
   z-index: 999;
   background: var(--loadingdark);
-  -webkit-box-shadow: 0 10px 0 0 #35405a, 0 -10px 0 0 #35405a;
-  box-shadow: 0 10px 0 0 #35405a, 0 -10px 0 0 #35405a;
+  -webkit-box-shadow: 0 10px 0 0 var(--loadingdark), 0 -10px 0 0 var(--loadingdark);
+  box-shadow: 0 10px 0 0 var(--loadingdark), 0 -10px 0 0 var(--loadingdark);
 }
 
-.light-container .light-wrap .panel,
+.light-container .light-wrap .light-panel,
 .light-container .light-wrap .light {
   position: absolute;
   left: 0;
@@ -158,7 +164,7 @@
   height: 200px;
 }
 
-.light-container .light-wrap .panel {
+.light-container .light-wrap .light-panel {
   background: var(--loadingdark);
   border: 1px solid var(--white);
   -webkit-transform-style: preserve-3d;
@@ -170,7 +176,7 @@
   z-index: 3;
 }
 
-.light-container .light-wrap .panel:before {
+.light-container .light-wrap .light-panel:before {
   content: '';
   position: absolute;
   width: 100%;
