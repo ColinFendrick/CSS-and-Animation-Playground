@@ -15,7 +15,7 @@ export default () => {
 			<div className='home-link mb-3 mt-2'>
 				<h3>Click on a panel to view a demo</h3>
 			</div>
-			<div className='d-flex mb-5'>
+			<div className='d-flex mb-5 flex-wrap'>
 				<Link to='/animated-buttons' className='home-link'>
 					<img src={animatedbuttonsgif} alt='Animated Buttons!' />
 				</Link>
@@ -30,6 +30,9 @@ export default () => {
 				</Link>
 				<Link to='/buttons' className='home-link'>
 					<img src={buttonsgif} alt='Buttons!' />
+				</Link>
+				<Link to='/world' className='home-link'>
+					world map
 				</Link>
 			</div>
 

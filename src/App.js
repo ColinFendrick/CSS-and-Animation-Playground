@@ -8,7 +8,8 @@ import {
 	CoolBoxes,
 	LoadingLight,
 	Home,
-	Globs
+	Globs,
+	WorldMap
 } from './components';
 
 const App = () => (
@@ -20,6 +21,7 @@ const App = () => (
 			<Route path='/globs' component={Globs} />
 			<Route path='/boxes' component={CoolBoxes} />
 			<Route path='/home' component={Home} />
+			<Route path='/world' component={WorldMap} />
 			<Route path='/' component={LoadingLight} />
 		</Switch>
 	</div>

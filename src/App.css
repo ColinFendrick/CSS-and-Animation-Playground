@@ -184,3 +184,17 @@
   z-index: 1;
   transform: translateY(50%);
 }
+
+path.countries {
+  stroke-width: 1;
+  stroke: var(--loadingdark);
+  fill: var(--cyan);
+}
+path.countries:hover {
+  fill: red;
+}
+
+.worldmap {
+  height: 100vh;
+  width: 100vw;
+}
