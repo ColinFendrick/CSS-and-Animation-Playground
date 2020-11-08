@@ -6,7 +6,8 @@ import {
 	boxesgif,
 	buttonsgif,
 	globsgif,
-	panelsgif
+	panelsgif,
+	worldmapgif
 } from '../media';
 
 export default () => {
@@ -32,7 +33,7 @@ export default () => {
 					<img src={buttonsgif} alt='Buttons!' />
 				</Link>
 				<Link to='/world' className='home-link'>
-					world map
+					<img src={worldmapgif} classNam='home-link' alt='World Map!' />
 				</Link>
 			</div>
 
