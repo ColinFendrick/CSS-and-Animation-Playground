@@ -198,3 +198,8 @@ path.countries:hover {
   height: 100vh;
   width: 100vw;
 }
+
+.website-preview {
+  width: 100px;
+  height: 100px;
+}
