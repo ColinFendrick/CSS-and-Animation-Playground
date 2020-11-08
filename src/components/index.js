@@ -6,6 +6,7 @@ import Globs from './Globs';
 import Home from './Home';
 import LoadingLight from './LoadingLight';
 import MainText from './MainText';
+import MyTooltip from './MyTooltip';
 import WorldMap from './WorldMap';
 
 export {
@@ -18,5 +19,6 @@ export {
 	Home,
 	LoadingLight,
 	MainText,
+	MyTooltip,
 	WorldMap
 };
