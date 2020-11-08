@@ -26,15 +26,17 @@ export default () => {
 
 	useChain(open ? [springRef, transRef] : [transRef, springRef], [0, open ? 0.1 : 0.6]);
 
-	return <div className='cool-boxes-wrapper'>
-		<animated.div className='cool-boxes' style={{ ...rest, width: size, height: size }} onClick={() => set(open => !open)}>
-			{transitions.map(({ item, key, props }) => (
-				<animated.div
-					className='transition-box'
-					style={{ ...props, background: item.css }}
-					key={key}
-				/>
-			))}
-		</animated.div>
-	</div>;
+	return (
+		<div className='background align-items-center justify-content-center'>
+			<animated.div className='cool-boxes' style={{ ...rest, width: size, height: size }} onClick={() => set(open => !open)}>
+				{transitions.map(({ item, key, props }) => (
+					<animated.div
+						className='transition-box'
+						style={{ ...props, background: item.css }}
+						key={key}
+					/>
+				))}
+			</animated.div>
+		</div>
+	);
 };

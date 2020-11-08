@@ -125,10 +125,6 @@
   overflow: hidden;
 }
 
-.cool-boxes-wrapper {
-  height: 100vh;
-  background-color: white;
-}
 .cool-boxes {
   position: relative;
   display: grid;
