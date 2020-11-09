@@ -33,7 +33,7 @@ export default () => {
 					<img src={buttonsgif} alt='Buttons!' />
 				</Link>
 				<Link to='/world' className='home-link'>
-					<img src={worldmapgif} classNam='home-link' alt='World Map!' />
+					<img src={worldmapgif} alt='World Map!' />
 				</Link>
 			</div>
 

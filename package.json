@@ -16,7 +16,7 @@
     "reactstrap": "^8.7.1"
   },
   "scripts": {
-    "start": "concurrently \"cd backend && npm run start\" \"react-scripts start\"",
+    "start": "concurrently \"cd backend && npm i && npm run start\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
