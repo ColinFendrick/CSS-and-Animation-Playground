@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTrail, animated } from 'react-spring';
 
 const fast = { tension: 1200, friction: 40 };
@@ -7,9 +7,13 @@ const trans = (x, y) => `translate3d(${x}px,${y}px,0) translate3d(-50%,-50%,0)`;
 
 export default () => {
 	const [trail, set] = useTrail(3, () => ({ xy: [0, 0], config: i => (i === 0 ? fast : slow) }));
+	const [color, setColor] = useState('lightcoral');
+
+	const changeColor = () =>
+		setColor(`#${Math.floor(Math.random() * 16777215).toString(16)}`);
 
 	return (
-		<div className='background'>
+		<div className='background' onClick={changeColor}>
 			<svg style={{ position: 'absolute', width: 0, height: 0 }}>
 				<filter id='goo'>
 					<feGaussianBlur in='SourceGraphic' result='blur' stdDeviation='30' />
@@ -17,8 +21,8 @@ export default () => {
 				</filter>
 			</svg>
 			<div className='globs' onMouseMove={e => set({ xy: [e.clientX, e.clientY]})}>
-				{trail.map((props, index) => (
-					<animated.div key={index} style={{ transform: props.xy.interpolate(trans) }} />
+				{trail.map((props, i) => (
+					<animated.div key={i} style={{ transform: props.xy.interpolate(trans), background: color }} />
 				))}
 			</div>
 		</div>
