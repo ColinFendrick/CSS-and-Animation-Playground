@@ -1,5 +1,5 @@
 export default color => {
-	let r, g, b, hsp;
+	let r; let g; let b; let hsp;
 
 
 	// If hex --> Convert it to RGB: http://gist.github.com/983661

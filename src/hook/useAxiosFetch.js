@@ -18,19 +18,18 @@ const useAxiosFetch = url => {
 					setData(a.data);
 					setLoading(false);
 				}
-			}).catch(function (e) {
+			}).catch(function(e) {
 				if (!unmounted) {
 					setError(true);
 					setErrorMessage(e.message);
 					setLoading(false);
-					if (axios.isCancel(e)) {
+					if (axios.isCancel(e))
 						console.log(`request cancelled:${e.message}`);
-					} else {
+					else
 						console.log('another error happened:' + e.message);
-					}
 				}
 			});
-		return function () {
+		return function() {
 			unmounted = true;
 			source.cancel('Cancelling in cleanup');
 		};
