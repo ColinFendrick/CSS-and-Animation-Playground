@@ -17,7 +17,7 @@ export default ({ target, country }) => {
 
 	useEffect(() => {
 		const source = axios.CancelToken.source();
-		(async () => {
+		(async() => {
 
 			if (!preview && tooltipOpen) {
 				setLoading(true);

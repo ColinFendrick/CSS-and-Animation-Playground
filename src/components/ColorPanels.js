@@ -3,6 +3,7 @@ import { animated, useTrail } from 'react-spring';
 import ColorScheme from 'color-scheme';
 
 import { MainText } from '.';
+import { text, schemes, variants } from '../data/panels';
 import { genRanInt, lightOrDark } from '../helpers';
 
 const config = { mass: 5, tension: 2000, friction: 200 };
@@ -10,16 +11,12 @@ const config = { mass: 5, tension: 2000, friction: 200 };
 export default () => {
 	const [counter, setCounter] = useState(0);
 
-	const [ranInt, ranScheme, ranVariant] = (() => {
-		const schemes = ['mono', 'contrast', 'triade', 'tetrade', 'analogic'];
-		const variants = ['default', 'pastel', 'soft', 'light', 'hard', 'pale'];
-
-		return [
-			genRanInt(256),
-			schemes[genRanInt(schemes.length)],
-			variants[genRanInt(variants.length)]
-		];
-	})();
+	const [ranInt, ranScheme, ranVariant, ranText] = (() => [
+		genRanInt(256),
+		schemes[genRanInt(schemes.length)],
+		variants[genRanInt(variants.length)],
+		text[!counter ? counter : genRanInt(text.length)] // returns first option before clicks
+	])();
 
 	const trail = useTrail(9, {
 		config,
@@ -34,14 +31,16 @@ export default () => {
 	return (
 		<div
 			className='background'
-			onClick={() => {
-				setCounter(() => setCounter(counter + 1));
-			}}
+			onClick={() => setCounter(counter + 1)}
 		>
-			{trail.map((props, index) =>
-				(index < 8) ?
-					<animated.div className='panel' key={index}  style={{ ...props, backgroundColor: `#${colors[index]}` }} /> :
-					<MainText key={index} style={{ ...props, color: `${lightOrDark(colors[0]) === 'light' ? 'black' : 'white' }` }} />
+			{trail.map((props, i) =>
+				(i < 8) ?
+					<animated.div className='panel' key={i}  style={{ ...props, backgroundColor: `#${colors[i]}` }} /> :
+					<MainText
+						key={i}
+						text={ranText}
+						style={{ ...props, color: `${lightOrDark(colors[0]) === 'light' ? 'black' : 'white' }` }}
+					/>
 			)}
 		</div>
 	);
