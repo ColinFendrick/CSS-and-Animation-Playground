@@ -8,7 +8,6 @@ export default () => {
 	const projection = geoMercator();
 	const pathGenerator = geoPath().projection(projection);
 
-
 	const countries = worlddata.features.map((d, i) => (
 		<React.Fragment key={`country-path${i}`}>
 			<path

@@ -32,7 +32,7 @@ export default () => {
 				{transitions.map(({ item, key, props }) => (
 					<animated.div
 						className='transition-box'
-						style={{ ...props, background: item.css }}
+						style={{ ...props, background: item.css, height: item.height, width: item.height }}
 						key={key}
 					/>
 				))}
