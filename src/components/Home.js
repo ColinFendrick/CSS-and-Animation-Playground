@@ -31,6 +31,9 @@ export default () => (
 			<Link to='/buttons' className='home-link'>
 				<img src={buttonsgif} alt='Buttons!' />
 			</Link>
+			<Link to='/draggablelist' className='home-link'>
+				<img alt='Draggable List!' />
+			</Link>
 			<Link to='/world' className='home-link'>
 				<img src={worldmapgif} alt='World Map!' />
 			</Link>

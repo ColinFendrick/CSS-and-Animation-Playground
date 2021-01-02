@@ -6,6 +6,7 @@ import {
 	CoolButtons,
 	ColorPanels,
 	CoolBoxes,
+	DraggableList,
 	LoadingLight,
 	Home,
 	Globs,
@@ -18,6 +19,7 @@ const App = () => (
 			<Route path='/animated-buttons' component={AnimatedButtons} />
 			<Route path='/buttons' component={CoolButtons} />
 			<Route path='/panels' component={ColorPanels} />
+			<Route path='/draggablelist' render={() => <DraggableList items={'Lorem ipsum dolor sit'.split(' ')}/>} />
 			<Route path='/globs' component={Globs} />
 			<Route path='/boxes' component={CoolBoxes} />
 			<Route path='/home' component={Home} />

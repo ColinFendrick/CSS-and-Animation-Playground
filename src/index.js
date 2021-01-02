@@ -7,7 +7,7 @@ import './index.css';
 import './App.css';
 import './Light.css';
 import './Buttons.css';
-
+import './Draggable.css';
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';
